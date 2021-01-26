@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const QuizBackground = styled.div`
+interface QuizBackgroundProps {
+  backgroundImage: string
+}
+
+export const QuizBackground = styled.div<QuizBackgroundProps>`
   width: 100%;
   background-size: cover;
   background-position: center;
