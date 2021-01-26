@@ -40,14 +40,14 @@ export default function Home() {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://metatags.io/"/>
+        <meta property="og:url" content="https://quiz-nextjs.psatler.vercel.app/"/>
         <meta property="og:title" content="Capixabês — Quiz sobre girias e palavras faladas pelo capixaba"/>
         <meta property="og:description" content="Teste seus conhecimentos sobre gírias e palavras faladas pelos capixadas!"/>
         <meta property="og:image" content="https://www.segueviagem.com.br/wp-content/uploads/2019/11/praia-de-camburi_vitoria_setur_yuri-barichivich-2-1200x675.jpg"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://metatags.io/"/>
+        <meta property="twitter:url" content="https://quiz-nextjs.psatler.vercel.app/"/>
         <meta property="twitter:title" content="Capixabês — Quiz sobre girias e palavras faladas pelo capixaba"/>
         <meta property="twitter:description" content="Teste seus conhecimentos sobre gírias e palavras faladas pelos capixadas!"/>
         <meta property="twitter:image" content="https://www.segueviagem.com.br/wp-content/uploads/2019/11/praia-de-camburi_vitoria_setur_yuri-barichivich-2-1200x675.jpg"/>
