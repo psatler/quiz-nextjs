@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Head from 'next/head'
-import db from '../db.json'
+import db from 'db.json'
 
-import { Widget, Footer, GitHubCorner, QuizBackground, QuizLogo } from '../src/components'
+import { Widget, Footer, GitHubCorner, QuizBackground, QuizLogo } from 'src/components'
 
 
 
