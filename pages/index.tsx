@@ -68,7 +68,7 @@ export default function Home() {
 
             <Widget>
               <Widget.Header>
-                Quiz da galera
+                Quizes da galera
               </Widget.Header>
 
               <Widget.Content>
