@@ -5,3 +5,4 @@ export { QuizBackground } from './QuizBackground';
 export { QuizLogo } from './QuizLogo';
 export { Input } from './Input';
 export { Button } from './Button';
+export { QuizContainer } from './QuizContainer';
