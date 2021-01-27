@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import db from 'db.json';
 
 import {
@@ -6,8 +7,8 @@ import {
 } from 'src/components';
 
 export default function Quiz() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const queryParam = urlParams.get('name');
+  const router = useRouter();
+  const { name: nameQueryParam } = router.query;
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -20,7 +21,7 @@ export default function Quiz() {
 
           <Widget.Content>
 
-            {`Olá, ${queryParam}!`}
+            {`Olá, ${nameQueryParam}!`}
 
             <br />
 
