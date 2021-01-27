@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import Head from 'next/head';
 import db from 'db.json';
 
 import {
-  Widget, Footer, GitHubCorner, QuizBackground, QuizLogo,
+  Widget, Footer, GitHubCorner, QuizBackground, QuizLogo, Button, Input,
 } from 'src/components';
 
 export const QuizContainer = styled.div`
@@ -19,9 +20,19 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
-  // OG meta tags
-  // https://www.netlify.com/blog/2020/05/08/improve-your-seo-and-social-sharing-cards-with-next.js/
-  // https://metatags.io/
+  const router = useRouter();
+  const [name, setName] = useState('');
+
+  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value);
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    router.push(`/quiz?name=${name}`);
+  }
+
   return (
     <>
       <Head>
@@ -57,7 +68,25 @@ export default function Home() {
             </Widget.Header>
 
             <Widget.Content>
-              {db.description}
+              {/* {db.description} */}
+              <form onSubmit={handleSubmit}>
+
+                <Input
+                  name="usernameInput"
+                  onChange={handleInput}
+                  placeholder="Digite seu nome"
+                  value={name}
+                  maxLength={30}
+                />
+
+                <Button
+                  type="submit"
+                  disabled={name.length === 0}
+                >
+                  {`Jogar ${name}`}
+                </Button>
+
+              </form>
             </Widget.Content>
 
           </Widget>
@@ -68,7 +97,7 @@ export default function Home() {
             </Widget.Header>
 
             <Widget.Content>
-              .
+              <p>lorem ipsum dolor sit amet...</p>
             </Widget.Content>
           </Widget>
 

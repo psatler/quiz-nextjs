@@ -15,6 +15,15 @@ yarn eslint --init
 
 Running ESLint [through the CLI](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project#run-eslint-with-the-cli)
 
+Tips for adding ESLint, Prettier, and more can be found [here](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js)
+
+
+##### Meta tagas
+
+Adding _OG_ tags and meta tags in general:
+
+- [https://www.netlify.com/blog/2020/05/08/improve-your-seo-and-social-sharing-cards-with-next.js/](https://www.netlify.com/blog/2020/05/08/improve-your-seo-and-social-sharing-cards-with-next.js/)
+- [https://metatags.io/](https://metatags.io/)
 
 
 # Example app with styled-components
