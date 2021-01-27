@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { appTheme } from 'src/theme'
+import React from 'react';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { appTheme } from 'src/theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,10 +29,9 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`
+`;
 
-
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps } : AppProps) {
   return (
     <>
       <Head>
@@ -43,5 +44,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }

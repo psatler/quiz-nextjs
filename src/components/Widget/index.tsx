@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { StyledComponentBase } from 'styled-components'
+import styled, { StyledComponentBase } from 'styled-components';
 
 // https://stackoverflow.com/a/61307690/13137278
 interface WidgetComponentProps extends StyledComponentBase<any, {}> {
@@ -17,7 +16,7 @@ const Header = styled.header`
   * {
     margin: 0;
   }
-`
+`;
 
 const Content = styled.div`
   padding: 24px 32px 32px 32px;
@@ -31,15 +30,13 @@ const Content = styled.div`
     list-style: none;
     padding: 0;
   }
-`
+`;
 
 export const Widget: WidgetComponentProps = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => {
-    return theme.colors.mainBg;
-  }};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;
 
@@ -57,5 +54,5 @@ export const Widget: WidgetComponentProps = styled.div`
   }
 `;
 
-Widget.Header = Header
-Widget.Content = Content
+Widget.Header = Header;
+Widget.Content = Content;

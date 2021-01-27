@@ -5,8 +5,15 @@
 
 ## Useful links
 
-- 
+##### Adding ESLint
 
+```
+yarn add -D eslint
+
+yarn eslint --init
+```
+
+Running ESLint [through the CLI](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project#run-eslint-with-the-cli)
 
 
 
