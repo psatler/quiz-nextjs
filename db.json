@@ -4,25 +4,63 @@
   "description": "Teste seus conhecimentos sobre o seu capixabês",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/9QmldqOBxeBZC/giphy.gif",
+      "title": "No Espírito Santo, a bola?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "estoura",
+        "poca",
+        "pipoca",
+        "arrebenta"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media.giphy.com/media/l2Sq2toeHj42K9Quk/giphy.gif",
+      "title": "O capixaba ... do ônibus",
+      "description": "Quero ver em haha",
+      "answer": 3,
+      "alternatives": [
+          "desembarca",
+          "pula",
+          "desce",
+          "salta"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/l3V0EkFLV5DHg2KTC/giphy.gif",
+      "title": "No Espiríto Santo, você come um",
+      "description": "Essa é fácil",
+      "answer": 2,
+      "alternatives": [
+          "pão francês",
+          "cassetinho",
+          "pão de sal",
+          "pãozinho"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/l2LpJ6LKqdVFjndYqy/giphy.gif",
+      "title": "Quando o capixaba sai à noite, ele vai",
+      "description": "Não importa o estilo/lugar",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+          "pros rock",
+          "pras balada",
+          "pra night",
+          "pro clube"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/3oEjI5VtIhHvK37WYo/giphy.gif",
+      "title": "Um capixaba diria que o Alura Quiz foi",
+      "description": "top top top",
+      "answer": 1,
+      "alternatives": [
+          "irado",
+          "massa",
+          "legal",
+          "lindo"
       ]
     }
   ],

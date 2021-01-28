@@ -4,6 +4,7 @@ import styled, { StyledComponentBase } from 'styled-components';
 interface WidgetComponentProps extends StyledComponentBase<any, {}> {
   Header?: typeof Header
   Content?: typeof Content
+  Topic?: typeof Topic
 }
 
 const Header = styled.header`
@@ -32,6 +33,29 @@ const Content = styled.div`
   }
 `;
 
+const Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    /* display: none; */
+  }
+`;
+
 export const Widget: WidgetComponentProps = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
@@ -56,3 +80,4 @@ export const Widget: WidgetComponentProps = styled.div`
 
 Widget.Header = Header;
 Widget.Content = Content;
+Widget.Topic = Topic;
