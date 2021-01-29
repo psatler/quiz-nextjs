@@ -6,3 +6,5 @@ export { QuizLogo } from './QuizLogo';
 export { Input } from './Input';
 export { Button } from './Button';
 export { QuizContainer } from './QuizContainer';
+export { LoadingIcon } from './Loading';
+export { AlternativesForm } from 'src/components/AlternativesForm';

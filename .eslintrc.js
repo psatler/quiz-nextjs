@@ -47,6 +47,7 @@ module.exports = {
     ],
     'react/require-default-props': 'off',
     'react/prop-types': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
   settings: {
     'import/resolver': {

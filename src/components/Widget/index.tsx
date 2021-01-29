@@ -51,7 +51,7 @@ const Topic = styled.a`
   }
 
   input[type="radio"] {
-    appearance: none;
+    /* appearance: none; */
     /* display: none; */
   }
 `;
