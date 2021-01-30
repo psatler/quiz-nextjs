@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Widget, Button } from 'src/components';
 
 interface ResultWidgetProps {
@@ -13,7 +13,16 @@ export function ResultWidget({ results, handleOnClick, username }: ResultWidgetP
   const user = username ? `, ${username}` : '';
 
   return (
-    <Widget>
+    <Widget
+      as={motion.div}
+      transition={{ delay: 0, duration: 0.3 }}
+      variants={{
+        show: { opacity: 1, y: '0' },
+        hidden: { opacity: 0, y: '100%' },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         Resultado
       </Widget.Header>

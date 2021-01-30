@@ -5,6 +5,8 @@ import {
 
 import db from 'db.json';
 
+import { motion } from 'framer-motion';
+
 interface QuestionWidgetProps {
   question: typeof db.questions[0];
   questionIndex: number;
@@ -27,6 +29,8 @@ export const QuestionWidget: React.FC<QuestionWidgetProps> = ({
 
   const [disableAlternatives, setDisableAlternatives] = React.useState(false);
 
+  const [isHidden, setIsHidden] = React.useState(false);
+
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
@@ -35,10 +39,12 @@ export const QuestionWidget: React.FC<QuestionWidgetProps> = ({
 
     setIsQuestionSubmitted(true);
     setDisableAlternatives(true);
+    setIsHidden(true);
 
     setTimeout(() => {
       addResult(isCorrect);
       onSubmit();
+      setIsHidden(false);
       setIsQuestionSubmitted(false);
       setDisableAlternatives(false);
       setSelectedAlternative(undefined);
@@ -82,13 +88,24 @@ export const QuestionWidget: React.FC<QuestionWidgetProps> = ({
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
 
+            const animationDelay = alternativeIndex * 0.1;
+
             return (
               <Widget.Topic
                 key={alternativeId}
-                as="label"
+                // as="label"
                 htmlFor={alternativeId}
                 data-selected={isSelected}
                 data-status={isQuestionSubmitted && alternativeStatus}
+                as={motion.label}
+                transition={{ delay: animationDelay, duration: 0.3 }}
+                variants={{
+                  show: { opacity: 1, x: '0' },
+                  hidden: { opacity: 0, x: '-100%' },
+                }}
+                initial="hidden"
+                // animate="show"
+                animate={isHidden ? 'hidden' : 'show'}
               >
                 <input
                   style={{ display: 'none' }}

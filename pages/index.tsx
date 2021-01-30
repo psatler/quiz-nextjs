@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import db from 'db.json';
+import { motion } from 'framer-motion';
 
 import {
   Widget, Footer, GitHubCorner, QuizBackground, QuizLogo, Button, Input, QuizContainer, Link,
@@ -50,7 +51,17 @@ export default function Home() {
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
           <QuizLogo />
-          <Widget>
+          <Widget
+            as={motion.section}
+            transition={{ delay: 0, duration: 0.3 }}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' },
+            }}
+            initial="hidden"
+            animate="show"
+
+          >
             <Widget.Header>
               {db.title}
             </Widget.Header>
@@ -79,7 +90,16 @@ export default function Home() {
 
           </Widget>
 
-          <Widget>
+          <Widget
+            as={motion.section}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            variants={{
+              show: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+            initial="hidden"
+            animate="show"
+          >
             <Widget.Header>
               Quizes da galera
             </Widget.Header>
@@ -98,7 +118,7 @@ export default function Home() {
                       <li key={externalLink}>
                         <Widget.Topic
                           href={`/quiz/${projectName}___${githubUser}`}
-                          as={Link}
+                          forwardedAs={Link}
                         >
                           {`${githubUser}/${projectName}`}
                         </Widget.Topic>
@@ -110,7 +130,17 @@ export default function Home() {
             </Widget.Content>
           </Widget>
 
-          <Footer />
+          <Footer
+            as={motion.footer}
+            transition={{ delay: 0.6, duration: 0.3 }}
+            variants={{
+              show: { opacity: 1, x: '0' },
+              hidden: { opacity: 0, x: '-100%' },
+            }}
+            initial="hidden"
+            animate="show"
+
+          />
         </QuizContainer>
 
         <GitHubCorner projectUrl="https://github.com/psatler" />
