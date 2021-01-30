@@ -38,7 +38,7 @@ export function QuizScreen({ externalQuestions, externalBg }: QuiScreenProps) {
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1300);
+    }, 1 * 2100);
   }, []);
 
   function handleSubmitQuiz() {
