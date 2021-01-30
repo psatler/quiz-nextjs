@@ -8,3 +8,5 @@ export { Button } from './Button';
 export { QuizContainer } from './QuizContainer';
 export { LoadingIcon } from './Loading';
 export { AlternativesForm } from 'src/components/AlternativesForm';
+export { Link } from './Link';
+export { BackArrowLink } from './BackArrowLink';

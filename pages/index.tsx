@@ -4,7 +4,7 @@ import Head from 'next/head';
 import db from 'db.json';
 
 import {
-  Widget, Footer, GitHubCorner, QuizBackground, QuizLogo, Button, Input, QuizContainer,
+  Widget, Footer, GitHubCorner, QuizBackground, QuizLogo, Button, Input, QuizContainer, Link,
 } from 'src/components';
 
 export default function Home() {
@@ -85,7 +85,28 @@ export default function Home() {
             </Widget.Header>
 
             <Widget.Content>
-              <p>lorem ipsum dolor sit amet...</p>
+              <ul>
+                {
+                  db.external.map((externalLink) => {
+                    const [projectName, githubUser] = externalLink
+                      .replace(/\//g, '')
+                      .replace('https:', '')
+                      .replace('.vercel.app', '')
+                      .split('.');
+
+                    return (
+                      <li key={externalLink}>
+                        <Widget.Topic
+                          href={`/quiz/${projectName}___${githubUser}`}
+                          as={Link}
+                        >
+                          {`${githubUser}/${projectName}`}
+                        </Widget.Topic>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
             </Widget.Content>
           </Widget>
 
