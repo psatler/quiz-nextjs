@@ -28,7 +28,7 @@ export default function QuizDaGaleraPage({ dbExterno }: Props) {
 // cheatsheet: https://www.saltycrane.com/cheat-sheets/typescript/next.js/latest/
 // https://ironeko.com/posts/how-to-return-a-404-error-in-getserversideprops-with-next-js/
 export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
-  const [projectName, githubUser] = context.query.id.split('___');
+  const [projectName, githubUser] = context.query.id.toString().split('___');
 
   try {
     const dbExterno = await fetch(`https://${projectName}.${githubUser}.vercel.app/api/db`)
